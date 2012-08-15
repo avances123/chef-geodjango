@@ -12,7 +12,6 @@ to use your actual database user and database name.
 This cookbook depends on the following cookbooks:
 
  * build-essential
- * database
  * postgresql
 
 <!--- TODO: Update Vagrant instructions.
