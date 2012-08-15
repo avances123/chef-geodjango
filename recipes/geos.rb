@@ -1,7 +1,7 @@
 include_recipe "build-essential"
 
 
-version = node[:geos][:version]
+version = node[:geodjango][:geos][:version]
 
 
 remote_file "#{Chef::Config[:file_cache_path]}/geos-#{version}.tar.bz2" do

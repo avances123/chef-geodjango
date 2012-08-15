@@ -7,7 +7,7 @@ include_recipe "geodjango::proj4"
 package "postgresql-server-dev-8.4"
 package "libpq-dev" # for pg_config
 
-version = node[:postgis][:version]
+version = node[:geodjango][:postgis][:version]
 
 remote_file "#{Chef::Config[:file_cache_path]}/postgis-#{version}.tar.gz" do
 	source "http://postgis.refractions.net/download/postgis-#{version}.tar.gz"

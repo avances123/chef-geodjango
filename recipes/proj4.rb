@@ -1,7 +1,7 @@
 include_recipe "build-essential"
 
-version = node[:proj4][:version]
-datumgrid = node[:proj4][:datumgrid][:version]
+version = node[:geodjango][:proj4][:version]
+datumgrid = node[:geodjango][:proj4][:datumgrid][:version]
 
 remote_file "#{Chef::Config[:file_cache_path]}/proj-#{version}.tar.gz" do
 	source "http://download.osgeo.org/proj/proj-#{version}.tar.gz"
