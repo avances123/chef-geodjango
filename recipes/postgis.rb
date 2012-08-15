@@ -6,6 +6,7 @@ include_recipe "geodjango::proj4"
 # Packages we require
 package "postgresql-server-dev-#{node[:postgresql][:version]}"
 package "libpq-dev" # for pg_config
+package "libxml2-dev"
 
 version = node[:geodjango][:postgis][:version]
 
