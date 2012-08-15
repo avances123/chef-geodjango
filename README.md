@@ -9,6 +9,8 @@ instance, or with [Vagrant](http://vagrantup.com/)
 Make sure you customize `cookbooks/database/attributes/default.rb`
 to use your actual database user and database name.
 
+<!--- TODO: Update Vagrant instructions.
+
 To try the setup out, do:
 
 
@@ -17,3 +19,4 @@ To try the setup out, do:
 	$ vagrant up
 
 That'll give you a virtual machine with a database ready to go.
+-->
