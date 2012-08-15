@@ -9,6 +9,12 @@ instance, or with [Vagrant](http://vagrantup.com/)
 Make sure you customize `cookbooks/database/attributes/default.rb`
 to use your actual database user and database name.
 
+This cookbook depends on the following cookbooks:
+
+ * build-essential
+ * database
+ * postgresql
+
 <!--- TODO: Update Vagrant instructions.
 
 To try the setup out, do:
