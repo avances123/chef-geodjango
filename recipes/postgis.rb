@@ -1,7 +1,7 @@
 include_recipe "build-essential"
 include_recipe "postgresql::server"
-include_recipe "geos"
-include_recipe "proj4"
+include_recipe "geodjango::geos"
+include_recipe "geodjango::proj4"
 
 # Packages we require
 package "postgresql-server-dev-8.4"
