@@ -25,4 +25,5 @@ bash "create_postgis_template" do
     psql -d template_postgis -c "GRANT ALL ON geography_columns TO PUBLIC;"
     psql -d template_postgis -c "GRANT ALL ON spatial_ref_sys TO PUBLIC;"
   EOH
+  not_if 'psql -c "\l" | grep "template_postgis"', :user => "postgres"
 end
