@@ -22,8 +22,15 @@ bash "compile_proj4_source" do
 		cd ..
 		./configure 
 		make 
+	EOH
+	creates "#{Chef::Config[:file_cache_path]}/proj-#{version}"
+end
+
+bash "install_proj4" do
+	cwd Chef::Config[:file_cache_path]
+	code <<-EOH
+		cd proj-#{version}
 		make install
 		ldconfig
 	EOH
-	creates "#{Chef::Config[:file_cache_path]}/proj-#{version}"
 end

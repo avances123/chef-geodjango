@@ -20,8 +20,15 @@ bash "compile_postgis_source" do
     cd postgis-#{version}
     ./configure
     make
+  EOH
+  creates "#{Chef::Config[:file_cache_path]}/postgis-#{version}"
+end
+
+bash "install_postgis" do
+  cwd Chef::Config[:file_cache_path]
+  code <<-EOH
+    cd postgis-#{version}
     make install
     ldconfig
   EOH
-  creates "#{Chef::Config[:file_cache_path]}/postgis-#{version}"
 end
