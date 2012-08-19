@@ -1,4 +1,5 @@
 include_recipe "build-essential"
+include_recipe "postgresql::client"
 include_recipe "geodjango::geos"
 include_recipe "geodjango::proj4"
 
