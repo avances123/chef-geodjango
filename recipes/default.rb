@@ -1,1 +1,1 @@
-include_recipe "geodjango::postgis"
+include_recipe "geodjango::server"
